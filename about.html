@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story | Orange Ride</title>
+<style>
+:root {
+  --orange: #ff6500;
+  --ink: #202020;
+  --cream: #f7f5ef;
+  --gray: #686868;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+}
+a { color: inherit; text-decoration: none; }
+header {
+  background: #fff;
+  min-height: 78px;
+  padding: 18px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #e6e2d9;
+}
+.logo { font-size: 23px; font-weight: 900; letter-spacing: -1px; }
+.logo span { color: var(--orange); }
+nav { display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
+nav a { font-size: 11px; font-weight: 900; letter-spacing: 1px; }
+nav a:hover { color: var(--orange); }
+.nav-cta { background: var(--ink); color: white; padding: 13px 16px; }
+.page-intro {
+  padding: 65px 8% 55px;
+  display: grid;
+  grid-template-columns: 1fr .7fr;
+  align-items: end;
+  gap: 35px;
+}
+.kicker { color: var(--orange); font-size: 11px; font-weight: 900; letter-spacing: 2.5px; }
+h1 {
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: .96; letter-spacing: -4px;
+  margin-top: 22px; max-width: 720px;
+}
+h1 span { color: var(--orange); }
+.intro-copy { color: var(--gray); line-height: 1.9; font-size: 15px; max-width: 400px; padding-bottom: 5px; }
+.story {
+  margin: 0 8%;
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  min-height: 410px;
+  background: #fff;
+}
+.story-image { min-height: 380px; background: #ddd; overflow: hidden; }
+.story-image img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; }
+.story-copy { padding: clamp(25px, 5vw, 60px); display: flex; flex-direction: column; justify-content: center; }
+.story-copy h2 { font-size: clamp(30px, 4vw, 46px); line-height: 1.05; letter-spacing: -1.5px; margin: 15px 0 20px; }
+.story-copy p { font-size: 14px; line-height: 1.9; color: var(--gray); margin-bottom: 14px; }
+.signature { color: var(--orange); font-size: 11px; font-weight: 900; letter-spacing: 2px; margin-top: 15px; }
+.philosophy { padding: 90px 8%; }
+.philosophy-head { display: flex; justify-content: space-between; align-items: end; gap: 25px; margin-bottom: 35px; }
+.philosophy h2 { font-size: clamp(32px, 4vw, 50px); letter-spacing: -1.5px; margin-top: 12px; }
+.philosophy-head p { max-width: 350px; color: var(--gray); line-height: 1.8; font-size: 14px; }
+.values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.value {
+  border-top: 3px solid var(--orange);
+  padding: 25px 22px 28px;
+  background: #fff;
+}
+.value .number { font-size: 12px; color: var(--orange); font-weight: 900; }
+.value h3 { font-size: 21px; margin: 18px 0 12px; }
+.value p { font-size: 13px; line-height: 1.8; color: var(--gray); }
+.contact {
+  background: var(--orange);
+  padding: 60px 8%;
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 25px;
+}
+.contact h2 { color: white; font-size: clamp(32px, 5vw, 55px); letter-spacing: -2px; }
+.contact p { color: #fff0e7; margin-top: 12px; line-height: 1.7; max-width: 450px; }
+.contact .btn {
+  flex-shrink: 0; background: #fff; color: var(--ink);
+  padding: 16px 22px; font-weight: 900; font-size: 11px; letter-spacing: 1px;
+}
+.contact .btn:hover { background: var(--ink); color: white; }
+footer {
+  background: #191919; color: #aaa;
+  padding: 28px 8%; display: flex; justify-content: space-between;
+  flex-wrap: wrap; gap: 15px; font-size: 12px;
+}
+footer strong { color: white; }
+footer a:hover { color: var(--orange); }
+@media(max-width: 760px) {
+  header { padding: 18px 5%; flex-wrap: wrap; }
+  nav { gap: 13px; }
+  nav a { font-size: 10px; }
+  .page-intro { padding: 50px 6%; grid-template-columns: 1fr; gap: 22px; }
+  h1 { letter-spacing: -2px; }
+  .story { margin: 0 6%; grid-template-columns: 1fr; }
+  .story-image, .story-image img { min-height: 270px; max-height: 340px; }
+  .philosophy { padding: 60px 6%; }
+  .philosophy-head { align-items: start; flex-direction: column; }
+  .values { grid-template-columns: 1fr; }
+  .contact { padding: 48px 6%; align-items: start; flex-direction: column; }
+}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="index.html">ORANGE<span>RIDE.</span></a>
+  <nav aria-label="Main navigation">
+    <a href="index.html">HOME</a>
+    <a href="index.html#bikes">BIKES</a>
+    <a href="about.html">OUR STORY</a>
+    <a class="nav-cta" href="#contact">GET IN TOUCH ↗</a>
+  </nav>
+</header>
+
+<main>
+<section class="page-intro">
+  <div>
+    <div class="kicker">OUR STORY / OUR PURPOSE</div>
+    <h1>BUILT AROUND<br>THE <span>RIDE.</span></h1>
+  </div>
+  <p class="intro-copy">We believe a motorcycle is more than a way to travel. It is a connection between engineering, personal expression and the freedom to discover what's beyond the next turn.</p>
+</section>
+
+<section class="story">
+  <div class="story-image">
+    <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1100&q=85" alt="Motorcycle ready for an adventure">
+  </div>
+  <div class="story-copy">
+    <div class="kicker">01 / THE IDEA</div>
+    <h2>A DIFFERENT KIND OF MOTORCYCLE EXPERIENCE.</h2>
+    <p>Orange Ride is a student-created motorcycle website concept inspired by bold European performance styling, expressive orange accents and the energy of life on two wheels.</p>
+    <p>Our goal is to present motorcycle categories, design ideas and riding inspiration through a clear, modern digital experience.</p>
+    <div class="signature">DESIGNED FOR THE NEXT JOURNEY.</div>
+  </div>
+</section>
+
+<section class="philosophy" id="philosophy">
+  <div class="philosophy-head">
+    <div>
+      <div class="kicker">02 / WHAT DRIVES US</div>
+      <h2>OUR DESIGN PHILOSOPHY.</h2>
+    </div>
+    <p>Every part of this concept has a purpose: communicate clearly, look distinctive and make exploration feel effortless.</p>
+  </div>
+  <div class="values">
+    <article class="value">
+      <div class="number">01 — PERFORMANCE</div>
+      <h3>Purposeful Design</h3>
+      <p>Strong typography, focused layouts and carefully selected imagery create a sense of movement without distracting from the content.</p>
+    </article>
+    <article class="value">
+      <div class="number">02 — CHARACTER</div>
+      <h3>Bold Identity</h3>
+      <p>Orange highlights, neutral surfaces and confident visual contrasts give the website a consistent, recognisable personality.</p>
+    </article>
+    <article class="value">
+      <div class="number">03 — EXPERIENCE</div>
+      <h3>Made for Everyone</h3>
+      <p>Responsive layouts and clear navigation help visitors explore the concept on desktop computers, tablets and mobile phones.</p>
+    </article>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div>
+    <h2>YOUR NEXT RIDE<br>STARTS HERE.</h2>
+    <p>Explore the motorcycle collection or return to the homepage to discover the different riding styles.</p>
+  </div>
+  <a class="btn" href="home.html#bikes">EXPLORE THE BIKES ↗</a>
+</section>
+</main>
+
+<footer>
+  <strong>ORANGERIDE.</strong>
+  <span>Independent student design concept · Not affiliated with KTM</span>
+  <a href="home.html">← BACK TO HOME</a>
+  <span>© <span id="year"></span> Orange Ride</span>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener("click", event => {
+    const target = document.querySelector(link.getAttribute("href"));
+    if (target) {
+      event.preventDefault();
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
+</script>
+</body>
+</html>
